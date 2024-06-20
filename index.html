@@ -8,12 +8,12 @@
     @media (orientation: landscape) {
       #gameBoard {
         position: absolute;
-        top: 130px;
+        top: 30vw;
         left: 5vw;
       }
       #answerBoard {
         position: absolute;
-        top: 136px;
+        top: 30vw;
         left: 35vw;
       }
       .cell {
@@ -92,6 +92,19 @@
         margin-left: 0.5vw;
       }
     }
+
+    h1{
+        font-size: 5vw;
+    }
+    #option{
+        font-size: 3vw;
+    }
+    #quizSelect{
+        font-size: 3vw;
+    }
+    label{
+        font-size: 3vw;
+    }
     
   </style>
 </head>
@@ -99,6 +112,13 @@
   <h1>ライツアウトパズル</h1>
   
   <div>
+    <label for="option">難易度・設定の選択:</label>
+    <select id="option" onChange="window.location.href=this.value">
+      <option value="https://kanae3.github.io/lights-out-random-Ver1.1/">RANDOM</option>
+      <option value="https://kanae3.github.io/lights-out-overload-Ver1.1/">OVERLOAD</option>
+      <option value="https://kanae3.github.io/lights-out-hard-Ver1.1/">HARD</option>
+    </select>
+    <br>
     <label for="quizSelect">問題の選択:</label>
     <select id="quizSelect" onclick="changeQuiz()">
       <option value=0>ランダムOVERLOAD</option>
